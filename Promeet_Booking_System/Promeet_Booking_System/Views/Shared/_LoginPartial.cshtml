@@ -1,0 +1,32 @@
+﻿
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("Logout", "User", FormMethod.Post, new { id = "logoutForm" , @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+    
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <span> <a style="color:white"> Hello @HttpContext.Current.User.Identity.Name</a></span>
+            </li>
+            <li>
+                <span style="color:white;">  @Html.ActionLink("Profile", "Profile", "UserEntry") </span>
+            </li>
+            <li>
+                <span> <a href="javascript:document.getElementById('logoutForm').submit()" style="color:white">Logout</a> </span>
+            </li>
+        </ul>
+    
+    }
+}
+else
+{
+<ul class="nav navbar-nav navbar-right">
+    <li><span class="glyphicon glyphicon-home">@Html.ActionLink("Home", "Index", "Home")</span></li>
+    <li><span class="glyphicon glyphicon-user">@Html.ActionLink("SignUp", "Registration", "User")</span></li>
+    <li><span class="glyphicon glyphicon-log-in">@Html.ActionLink("Login", "Login", "User")</span></li>
+    <li><span class="glyphicon glyphicon-book">@Html.ActionLink("About", "About", "Home")</span></li>
+    <li><span class="glyphicon glyphicon-envelope">@Html.ActionLink("Contact", "Contact", "Home")</span></li>
+</ul>
+}
+

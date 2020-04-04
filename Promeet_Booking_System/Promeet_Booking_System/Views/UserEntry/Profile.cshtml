@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Profile";
+}
+
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-4" style="padding-left:250px">
+                <button  name="employee" onclick="location.href='@Url.Action("BookingIndexMain", "Bookings")';return false;">
+                    <p>Employee?</p>
+                    <img src="~/Content/Images/employeeicon.png" />
+                </button>
+            </div>
+            <div class="col-md-7" style="padding-left:300px">
+                <button  name="vendor" onclick="location.href='@Url.Action("Index", "Rooms")';">
+                    <p>Vendor?</p>
+                    <img src="~/Content/Images/vendoricon.png" />
+                </button>
+             </div>
+            </div>
+        </div>
+
+ 
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+

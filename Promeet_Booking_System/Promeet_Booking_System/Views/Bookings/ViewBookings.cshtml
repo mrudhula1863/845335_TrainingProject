@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Promeet_Booking_System.Models.Booking>
+@{
+    ViewBag.Title = "ViewBookings";
+}
+
+<h2>ViewBookings</h2>
+@if (Model.Count() == 0)
+{
+    <table>
+        <tr>
+            <td colspan="3" style="color:red">
+                No Bookings made by you.
+            </td>
+        </tr>
+    </table>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.User.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.PhoneNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.Office_Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Room.RoomName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Room.Location)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Date_Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duration)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.EmailId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.PhoneNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Office_Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Room.RoomName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Room.Location)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date_Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+
+
+                <td>
+                    |
+                    <span class="glyphicon glyphicon-erase">   @Html.ActionLink("CancelBooking", "Delete", new { id = item.BookingId })</span>
+                </td>
+            </tr>
+        }
+
+    </table>
+    }
+    <div>
+        @Html.ActionLink("Back to EmployeeHome", "BookingIndexMain")
+    </div>

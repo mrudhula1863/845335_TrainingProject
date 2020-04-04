@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Promeet_Booking_System",
+    "\\Promeet_Booking_System\\Controllers",
+    "\\Promeet_Booking_System\\Views",
+    "\\Promeet_Booking_System\\Views\\Bookings",
+    "\\Promeet_Booking_System\\Views\\Rooms"
+  ],
+  "SelectedNode": "\\Promeet_Booking_System\\Views\\Bookings\\ViewBookings.cshtml",
+  "PreviewInSolutionExplorer": false
+}

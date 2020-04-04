@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "BookingIndexMain";
+}
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-3" style="padding-left:100px">
+            <button name="createrooom" onclick="location.href='@Url.Action("Index", "Bookings")';return false;">
+                <p>SEARCH ROOMS</p>
+                <img src="~/Content/Images/searchroom.png" />
+            </button>
+        </div>
+        <div class="col-md-5" style="padding-left:250px">
+            <button name="viewrooom" onclick="location.href='@Url.Action("ViewBookings", "Bookings")';return false;">
+                <p>VIEW BOOKINGS</p>
+                <img src="~/Content/Images/view rooms.png" />
+            </button>
+        </div>
+    </div>
+</div>

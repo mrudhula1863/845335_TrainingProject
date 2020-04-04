@@ -1,0 +1,151 @@
+﻿@model IEnumerable<Promeet_Booking_System.Models.Room>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    @Html.TextBox("searching")
+    <input type="submit" value="Search" />
+}
+
+@if (Model.Count() == 0)
+{
+<table>
+    <tr>
+        <td colspan="3" style="color:red">
+            No Rooms found in your location.
+        </td>
+    </tr>
+</table>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RoomName)
+                </th>
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Location)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.CapacityOfRoom)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.AC)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Projector)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CoffeeFilter)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WaterBottles)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mic)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Speaker)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.System)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Podium)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WiFi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WhiteBoard)
+                </th>
+                
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomName)
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.CapacityOfRoom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Projector)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CoffeeFilter)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WaterBottles)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Speaker)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.System)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Podium)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WiFi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WhiteBoard)
+                </td>
+
+
+                <td>
+
+                    <span class="glyphicon glyphicon-book">@Html.ActionLink("BookNow", "Create","Bookings",new { roomid=item.RoomId},null)</span>
+                </td>
+            </tr>
+            }
+            
+
+        </tbody>
+    </table>
+}
+
+    
+<div style="padding-top:300px">
+    @Html.ActionLink("Back to EmployeeHome", "BookingIndexMain")
+</div>

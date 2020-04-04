@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Promeet_Booking_System.Models.Room>
+
+@{
+    ViewBag.Title = "RoomIndex";
+}
+
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-3" style="padding-left:100px">
+                <button name="createrooom" onclick="location.href='@Url.Action("AddRoom", "UserEntry")';return false;">
+                    <p>ADD ROOMS</p>
+                    <img src="~/Content/Images/addroom.png" />
+                </button>
+            </div>
+            <div class="col-md-4" style="padding-left:250px">
+                <button name="viewrooom" onclick="location.href='@Url.Action("ViewRooms", "Rooms")';return false;">
+                    <p>VIEW ROOMS</p>
+                    <img src="~/Content/Images/view rooms.png" />
+                </button>
+            </div>
+
+         
+        </div>
+     </div>
+           
+   

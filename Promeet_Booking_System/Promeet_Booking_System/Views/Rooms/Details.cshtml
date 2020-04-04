@@ -1,0 +1,143 @@
+﻿@model Promeet_Booking_System.Models.Room
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomName)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Projector)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Projector)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoffeeFilter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoffeeFilter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WaterBottles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WaterBottles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Speaker)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speaker)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.System)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.System)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Podium)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Podium)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WiFi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WiFi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WhiteBoard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WhiteBoard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CapacityOfRoom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CapacityOfRoom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Availability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Availability)
+        </dd>
+
+        
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "ViewRooms")
+</p>
